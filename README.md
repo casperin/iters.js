@@ -17,10 +17,17 @@ Notice that some functions can handle infinite iterables, while others can't (yo
 blow up!). Here are some examples:
 
 ```javascript
-const infiniteIterator = range(Infinity),   // This will create an iterator from 0 to Infinite
-    infinitePlusThree = map(x => x + 3, range(Infinite)),     // This is okay
-    onlyEven = filter(x => x % 2 === 0, range(Infinite)),     // also okay
-    veryBigNumber = reduce((x, y) => x + y, range(Infinite)); // This is *not* okay!
+// This creates an infinite iterator, giving values from 0 to infinity
+const infiniteIterator = range(Infinity);
+
+// You can call map on an infinite interator
+const infinitePlusThree = map(x => x + 3, range(Infinity));
+
+// Or filter...
+const onlyEven = filter(x => x % 2 === 0, range(Infinity));
+
+// But not reduce!
+const veryBigNumber = reduce((x, y) => x + y, range(Infinity)); // Don't do this!
 ```
 
 The reason it is not okay to `reduce` over an infinite iterator is that `reduce` by definition runs
