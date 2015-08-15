@@ -2,6 +2,8 @@ import all from './all';
 import any from './any';
 import enumerate from './enumerate';
 import filter from './filter';
+import flatten from './flatten';
+import flattenDeep from './flattenDeep';
 import map from './map';
 import list from './list';
 import max from './max';
@@ -24,18 +26,20 @@ import dropWhile from './dropWhile';
 import dropUntil from './dropUntil';
 import slice from './slice';
 
-export default {
+const iters = {
     all,
     any,
     enumerate,
     filter,
+    flatten,
+    flattenDeep,
     map,
     list,
     max,
     min,
     range,
     reduce,
-    reverseed,
+    reversed,
     sorted,
     str,
     sum,
@@ -51,3 +55,5 @@ export default {
     dropUntil,
     slice
 };
+
+export default iters;
