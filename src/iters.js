@@ -8,6 +8,7 @@ import map from './map';
 import list from './list';
 import max from './max';
 import min from './min';
+import random from './random';
 import range from './range';
 import reduce from './reduce';
 import reversed from './reversed';
@@ -37,6 +38,7 @@ const iters = {
     list,
     max,
     min,
+    random,
     range,
     reduce,
     reversed,

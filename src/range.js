@@ -1,4 +1,4 @@
-const range = function* (start, stop, step = 1) {
+const range = function* (start = Infinity, stop, step = 1) {
     if (arguments.length < 2) {
         stop = start;
         start = 0;
